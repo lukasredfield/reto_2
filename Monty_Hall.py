@@ -160,9 +160,11 @@ def jugar(tres_puertas, cambiar_decision, reintentos):
         print("tuve en total " + str(intentos.autos) + " aciertos y " + str(intentos.cabras) + " fallos")
 
 
-jugar(True, True, 1000)
-#juego_sin_descarte(1000)
-jugar(True, True, 1)
+jugar(True, True, 100000) # En esta función se juega el Problema de Monty Hall con las reglas de los distintos escenarios planteados en el reto 1 y sus respectivas resoluciones.
+
+juego_sin_descarte(1000) # En este escenario Monty Hall no elimina puertas y se puede ver cómo se acierta al auto el 33% de las veces.
+
+jugar(True, True, 1) #Acá se llama al juego original con un solo intendo, mostrando la lógica de este y como siempre se tiene más posibilidades de acertar el auto cambiando de elección.
 
 #if __name__=='__main__':
 
