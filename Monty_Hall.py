@@ -39,7 +39,7 @@ class Monty_Hall:
                 print("monty abre la puerta " + str(numero_de_puerta) + " y sale una cabra, luego pregunta: ¿Querés mantener tu eleccion o preferis cambiar de puerta?")
                 break
         return puertas
-        """ El juego original retornará las dos puertas para posteriormente ser ..."""
+        
 
     def juego_con_cuatro_puertas(self, puertas):
         """este metodo descarta una de las 4 puertas mientras no sea la que elegi y mientras no tenga el auto, luego retorna las 3 puertas restantes"""
@@ -102,7 +102,7 @@ def juego_sin_descarte(reintentos):
 
 
 def jugar(tres_puertas, cambiar_decision, reintentos):
-    """recibo un booleano para jugar con 3 o 4 puertas, otro booleano para jugar manteniendo o cambiando mi decision y el numero de veces a jugar"""
+    """recibo un booleano para jugar con 3 (True) o 4 puertas (False), otro booleano para jugar manteniendo (False) o cambiando (True) mi decision y el numero de veces a jugar (?)"""
     
     intentos=Intentos()
     puertas=dict()
@@ -160,11 +160,10 @@ def jugar(tres_puertas, cambiar_decision, reintentos):
         print("tuve en total " + str(intentos.autos) + " aciertos y " + str(intentos.cabras) + " fallos")
 
 
-jugar(True, True, 100000) # En esta función se juega el Problema de Monty Hall con las reglas de los distintos escenarios planteados en el reto 1 y sus respectivas resoluciones.
+if __name__=='__main__':
+    jugar(True, True, 100000) # En esta función se juega el Problema de Monty Hall con las reglas de los distintos escenarios planteados en el reto 1 y sus respectivas resoluciones.
 
-juego_sin_descarte(1000) # En este escenario Monty Hall no elimina puertas y se puede ver cómo se acierta al auto el 33% de las veces.
+    juego_sin_descarte(1000) # En este escenario Monty Hall no elimina puertas y se puede ver cómo se acierta al auto el 33% de las veces.
 
-jugar(True, True, 1) #Acá se llama al juego original con un solo intendo, mostrando la lógica de este y como siempre se tiene más posibilidades de acertar el auto cambiando de elección.
-
-#if __name__=='__main__':
+    jugar(True, True, 1) #Acá se llama al juego original con un solo intendo, mostrando la lógica de este y como siempre se tiene más posibilidades de acertar el auto cambiando de elección.
 
